@@ -30,19 +30,9 @@ We propose **CVMG**, a label enhancement framework that fully exploits the compl
 
 ## Framework
 
-```mermaid
-flowchart LR
-    X[Original Features X] --> CA[Cross-View Attention]
-    Y[Logical Labels Y] --> CA
-    CA --> H[High-Level Features H]
-    H --> IG[Instance-Level KNN Graph]
-    Y --> CG[Category-Level Top-K Graph]
-    IG --> MG[Mixed Dependency Graph]
-    CG --> MG
-    Y --> MG
-    MG --> LP[Label Propagation]
-    LP --> D[Recovered Label Distributions]
-```
+<p align="center">
+  <img src="framework.png" width="920" alt="CVMG framework: cross-view fusion, mixed dependency graph construction, and label propagation">
+</p>
 
 The framework contains three stages:
 
